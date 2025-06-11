@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import styled, { ThemeProvider } from "styled-components";
+import { darkTheme } from "./utils/Themes";
+import Navbar from "./components/Navbar";
+import { Router } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      Portfolio Website
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <Router>
+        <Navbar />
+      </Router>
+    </ThemeProvider>
   );
 }
 
